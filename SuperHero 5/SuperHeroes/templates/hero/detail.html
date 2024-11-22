@@ -1,0 +1,37 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="row align-items-start">
+        <div class="row">
+            <h1>{{ hero.title }}</h1>
+            <p>{{ hero.name }}</p>
+        </div>
+        <div class="row">
+            <h2>Strength and Weakness</h2>
+            <ul>
+                <li>{{ hero.strength }}</li>
+                <li>{{ hero.weakness }}</li>
+            </ul>
+            <h2>Age and Location</h2>
+            <ul>
+                <li>{{ hero.age }}</li>
+                <li>{{ hero.location }}</li>
+            </ul>
+            <h2>Favorite Food & Music</h2>
+            <ul>
+                <li>{{ hero.food }}</li>
+                <li>{{ hero.music }}</li>
+            </ul>
+        </div>
+    <div class="col">
+        <img src="{{ hero.image }}" width="250">
+    </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <a href="/hero/{{ hero.pk }}/" class="btn btn-success m-5">Edit Hero</a>
+
+    <a href="/hero/{{ hero.pk }}/delete" class="btn btn-danger m-5">Remove Hero</a>
+</div>
+{% endblock content %}
