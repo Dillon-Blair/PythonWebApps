@@ -1,0 +1,20 @@
+{% extends 'theme.html' %}
+
+{% block title %}
+Close Report
+{% endblock title %}
+
+{% block content %}
+
+<div class="container m-5">
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Delete poor old "{{ object.title }}"?</p>
+
+        <input type="submit" value="Confirm">
+    </form>
+
+</div>
+
+{% endblock content %}
