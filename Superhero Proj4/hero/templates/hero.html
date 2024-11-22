@@ -1,0 +1,21 @@
+{% extends 'theme.html' %}
+{% block content %}
+
+<h3 style="text-align: center;"><i>Meet This Guy!</i></h3>
+
+
+<p>
+    <img class="photo" src="/static/images/{{ photo.id }}.webp">
+</p>
+<p>
+    The stats!: <br>
+    
+    Name: {{ photo.name }}<br>
+    Strengths: {{ photo.strengths }}<br>
+    Weaknesses: {{ photo.weaknesses }}<br>
+
+</p>
+
+
+
+{% endblock content %}
