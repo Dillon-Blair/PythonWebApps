@@ -1,7 +1,7 @@
 {% extends 'theme.html' %}
 
 {% block title %}
-Close Report
+Close
 {% endblock title %}
 
 {% block content %}
@@ -10,7 +10,7 @@ Close Report
 
     <form action="" method="post">
         {% csrf_token %}
-        <p>Delete poor old "{{ object.title }}"?</p>
+        <p>Delete Confirmation "{{ object.title }}"?</p>
 
         <input type="submit" value="Confirm">
     </form>

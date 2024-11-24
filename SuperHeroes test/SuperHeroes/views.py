@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User # Had to import to make user features work. Most of this code I just recycled from the previous projects
 
 from .models import Hero
     

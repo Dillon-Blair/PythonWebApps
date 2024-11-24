@@ -13,6 +13,7 @@ class HeroListView(ListView):
             'object_list': Hero.objects.all()
         }
 
+## These are what we made in the lesson and learned about for project #5
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Hero

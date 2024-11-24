@@ -7,7 +7,7 @@ class Reporter(models.Model):
 
 class Hero(models.Model):
     heropk = models.AutoField(primary_key=True) #hero ph
-    #reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE, editable=False)
+    reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE, editable=False) #Causing problems
 
     title = models.CharField(max_length=200) #title
     name = models.CharField(max_length=200) # real name
