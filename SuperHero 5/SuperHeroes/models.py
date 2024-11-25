@@ -1,16 +1,19 @@
 from django.db import models
 
+
+
+#The same format as the Mark Seaman Lesson
 class Hero(models.Model):
     heropk = models.AutoField(primary_key=True)
 
     title = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
 
-    strength = models.CharField(max_length=200)
-    weakness = models.CharField(max_length=200)
+    strengths = models.CharField(max_length=200)
+    weaknesses = models.CharField(max_length=200)
 
     age = models.CharField(max_length=200)
-    location = models.CharField(max_length=200)
+    residence = models.CharField(max_length=200)
 
     food = models.CharField(max_length=200)
     music = models.CharField(max_length=200)

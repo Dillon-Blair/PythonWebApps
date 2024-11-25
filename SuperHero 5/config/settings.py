@@ -31,15 +31,15 @@ ALLOWED_HOSTS = ['*']
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 INSTALLED_APPS = [
-    "crispy_forms",
-    "crispy_bootstrap4",
+    "crispy_forms", #Installed this to help 
+    "crispy_bootstrap4", #Installed this to help
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'SuperHeroes',
+    'SuperHeroes', #For the SuperHeroes app
 ]
 
 MIDDLEWARE = [

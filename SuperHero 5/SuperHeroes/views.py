@@ -5,15 +5,15 @@ from .models import Hero
     
 class HeroListView(ListView):
     template_name = 'hero/list.html'
-    model = Hero
+    model = Hero #From models.py
     context_object_name = 'heroes'
 
     def get_context_data(self, **kwargs):
         return {
-            'object_list': Hero.objects.all()
+            'object_list': Hero.objects.all() #grabs all the objects created
         }
 
-## These are what we made in the lesson and learned about for project #5
+# These are what we made in the lesson and learned about for project #5
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Hero
