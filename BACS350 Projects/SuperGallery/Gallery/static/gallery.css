@@ -1,0 +1,35 @@
+h1 {
+    color: purple;
+    font-family: Impact, Arial, Helvetica, sans-serif, 'Arial Narrow Bold', sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.photo {
+    margin: 2em;
+    border-radius: 10px;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centered-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff; /* Add your desired background color */
+    color: #ffffff; /* Add your desired text color */
+    padding: 10px 20px; /* Add padding as needed */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+body {
+    background-color: whitesmoke;
+    color: blue;
+    text-align: center;
+}

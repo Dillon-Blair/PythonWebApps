@@ -23,7 +23,7 @@ class Hero(models.Model):
     food = models.CharField(max_length=200) # weakness 2
     music = models.CharField(max_length=200) # weakness 3
 
-    image = models.CharField(max_length=200) # imagepath
+    image = models.CharField(max_length=200) # imagelocation
 
     def __str__(self):
         return f"{self.heropk}. {self.title} - {self.name}"
