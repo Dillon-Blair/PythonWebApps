@@ -1,22 +1,24 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class Reporter(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
+#class Reporter(models.Model):
+    #name = models.CharField(max_length=100)
+    #email = models.EmailField()
+    #user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
 class Hero(models.Model):
     heropk = models.AutoField(primary_key=True) #hero ph
-    reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE, editable=False) #Causing problems
+    reporter = models.ForeignKey(User, on_delete=models.CASCADE, null =True, editable=False) #Causing problems
 
     title = models.CharField(max_length=200) #title
-    name = models.CharField(max_length=200) # real name
+    name = models.CharField(max_length=200) # real identity
 
-    strength = models.CharField(max_length=200) #strength 1
-    weakness = models.CharField(max_length=200) # strength 2
+    strength = models.CharField(max_length=200) # Their strengths
+    weaknesses = models.CharField(max_length=200) # Their weaknesses
 
-    age = models.CharField(max_length=200)  # strength 3
-    location = models.CharField(max_length=200) # weakness 1
+    age = models.CharField(max_length=200)  # Their age
+    residence = models.CharField(max_length=200) # Where they live
 
     food = models.CharField(max_length=200) # weakness 2
     music = models.CharField(max_length=200) # weakness 3
