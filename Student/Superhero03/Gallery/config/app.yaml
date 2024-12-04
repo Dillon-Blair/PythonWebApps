@@ -29,4 +29,4 @@ static_sites:
   name: bacs350-app-static
   routes:
   - path: /static
-  source_dir: SuperGallery/Gallery/static
+  source_dir: Superhero03/Gallery/static
