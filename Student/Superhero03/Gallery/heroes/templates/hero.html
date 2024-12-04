@@ -1,22 +1,20 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance-->
 {% block content %}
 
-<h3 style="text-align: center;"><i>The Stud!</i></h3>
+<h3 style="text-align: center;"><i>The Mighty Hero of Earth</i></h3>
 
 <p>
-    <img class="photo" src="{{ Image }}">
+    <img class="photo" src="{{ Image }}" width="200" >
 </p>
 <p>
     Stats: <br>
     
-    Name: {{ Name }}<br>
+    Title: {{ Title }}<br>
     Strengths: {{ Strengths }}<br>
     Weaknesses: {{ Weaknesses }}<br>
 
 </p>
-<p>
-    Here he/her is @: {{ Image }}
-</p>
+
 
 
 {% endblock content %}
