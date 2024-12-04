@@ -9,7 +9,9 @@ from .models import Hero
 from django.views import View
 from django.shortcuts import render
 #from .models import Reporter
-    
+
+
+#CRUD Operation Views  
 class HeroListView(ListView):
     template_name = 'hero/list.html'
     model = Hero
@@ -49,7 +51,7 @@ class HeroDeleteView(DeleteView):
 
 
 
-### User
+### User Authentication 
 
 class SignUpView(View):
     form_class = UserCreationForm

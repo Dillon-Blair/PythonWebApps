@@ -15,6 +15,7 @@ urlpatterns = [
 
     path("admin/", admin.site.urls),
 
+    path('accounts/logout', HeroListView.as_view()), #Cannot seem to get it working right
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', SignUpView.as_view(), name='signup'),
     path('accounts/profile/', HeroListView.as_view(), name='hero_list'),

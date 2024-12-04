@@ -1,4 +1,4 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance-->
 
 
 {% block title %}
@@ -16,7 +16,7 @@ Add A Hero!
         {% csrf_token %}
         {{ form|crispy }}
 
-        <button class="btn btn-success m-5" type="submit">Add Hero</button>
+        <button class="btn btn-success m-5" type="submit">Add New Hero!</button>
 
     </form>
 
