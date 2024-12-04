@@ -1,20 +1,18 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance-->
 {% block content %}
 
-<<<<<<< HEAD:BACS350 Projects/Superhero Proj4/hero/templates/hero.html
-<h3 style="text-align: center;"><i>The Hero is here!</i></h3>
-=======
-<h3 style="text-align: center;"><i>Here He/She Is!</i></h3>
->>>>>>> 2cb7540ececd8d29befb8acb86f3fe06f55d60af:Superhero Proj4/hero/templates/hero.html
+
+<h3 style="text-align: center;"><i>Here They Are!</i></h3>
+
 
 
 <p>
-    <img class="photo" src="/static/images/{{ photo.id }}.webp">
+    <img class="photo" src="/static/images/{{ photo.id }}.webp" width="200">
 </p>
 <p>
     Hero Stats: <br>
     
-    Name: {{ photo.name }}<br>
+    Title: {{ photo.name }}<br>
     Strengths: {{ photo.strengths }}<br>
     Weaknesses: {{ photo.weaknesses }}<br>
 

@@ -46,13 +46,11 @@ class HeroListView(TemplateView):
         return dict(photos=photo_list())
 
 
-class HeroDetailView(TemplateView):
+class HeroView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         i = kwargs['id']
-        #print(i)
         for j in range(len(photo_list())):
             if str(photo_list()[j]["id"]) == str(i):
-                return dict(photo=photo_list()[int(j)]) #Help from classmates
-        # Help
+                return dict(photo=photo_list()[int(j)]) 

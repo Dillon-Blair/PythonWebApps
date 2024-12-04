@@ -23,13 +23,13 @@ h1 {
     align-items: center;
     text-align: center;
     text-decoration: none;
-    background-color: #007bff; /* Add your desired background color */
-    color: #ffffff; /* Add your desired text color */
-    padding: 10px 20px; /* Add padding as needed */
-    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: #007bff; 
+    color: whitesmoke;
+    padding: 10px 20px; 
+    border-radius: 5px; 
 }
 body {
     background-color: goldenrod;
-    color: lime;
+    color: purple;
     text-align: center;
 }
