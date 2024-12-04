@@ -1,4 +1,4 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance -->
 
 {% block title %}
 Close and Finish
@@ -10,7 +10,7 @@ Close and Finish
 
     <form action="" method="post">
         {% csrf_token %}
-        <p>Delete Confirmation "{{ object.title }}"?</p>
+        <p>Confirm You Want To Delete {{ hero.name }}?</p>
 
         <input type="submit" value="Confirm">
     </form>

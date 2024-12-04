@@ -1,31 +1,30 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance -->
 
 {% block content %}
 <div class="d-flex justify-content-center">
     <div class="row align-items-start">
         <div class="row">
-            <h1>{{ hero.title }}</h1>
+            <h1>{{ hero.SuperheroName }}</h1>
             <p>{{ hero.name }}</p>
         </div>
+        
         <div class="row">
-            <h2>Strength and Weakness</h2>
-            <ul>
-                <li>{{ hero.strengths }}</li>
-                <li>{{ hero.weaknesses }}</li>
-            </ul>
-            <h2>Their age & Residence</h2>
+            <h2>Strengths</h2>
+            <p>{{ hero.strengths }}</p>
+            
+            <h2>Weaknesses</h2>
+            <p>{{ hero.weaknesses}}</p>
+            
+            <h2>Age, Residence, Favorite Food</h2>
             <ul>
                 <li>{{ hero.age }}</li>
                 <li>{{ hero.residence }}</li>
-            </ul>
-            <h2>What Food & Music?</h2>
-            <ul>
                 <li>{{ hero.food }}</li>
-                <li>{{ hero.music }}</li>
             </ul>
         </div>
-    <div class="col">
-        <img src="{{ hero.image }}" width="250">
+    
+        <div class="col">
+        <img src="{{ hero.image }}" width="200">
     </div>
     </div>
 </div>

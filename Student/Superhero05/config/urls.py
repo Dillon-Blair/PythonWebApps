@@ -5,7 +5,7 @@ from SuperHeroes.views import HeroDetailView, HeroListView, HeroCreateView, Hero
 
 urlpatterns = [
     path("", HeroListView.as_view()),
-
+    #Paths to the CRUD Operations
     path('hero/',                HeroListView.as_view(),    name='hero_list'),
     path('hero/<int:pk>',        HeroDetailView.as_view(),  name='hero_detail'),
     path('hero/add',             HeroCreateView.as_view(),  name='hero_add'),

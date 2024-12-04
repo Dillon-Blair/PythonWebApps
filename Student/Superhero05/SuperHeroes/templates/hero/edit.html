@@ -1,4 +1,4 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance -->
 
 {% block title %}
 Edit Hero
@@ -17,7 +17,7 @@ Edit Hero
 
         {{ form|crispy }}
 
-        <button class="btn btn-success m-5" type="submit">Save</button>
+        <button class="btn btn-success m-5" type="submit">Save Changes</button>
         <a class="btn btn-success m-5" href="delete">Delete</a>
 
     </form>

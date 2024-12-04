@@ -4,6 +4,9 @@ from django.db import models
 
 #The same format as the Mark Seaman Lesson
 class Hero(models.Model):
+    
+    #Fields to enter information about the hero
+
     heropk = models.AutoField(primary_key=True)
 
     SuperheroName = models.CharField(max_length=200)
@@ -14,11 +17,9 @@ class Hero(models.Model):
 
     age = models.CharField(max_length=200)
     residence = models.CharField(max_length=200)
-
     food = models.CharField(max_length=200)
-    music = models.CharField(max_length=200)
 
     image = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"{self.heropk}. {self.title} - {self.name}"
+        return f"{self.heropk}. {self.SuperheroName} - {self.name}"

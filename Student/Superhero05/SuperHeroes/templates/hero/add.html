@@ -1,8 +1,8 @@
-{% extends 'theme.html' %}
+{% extends 'theme.html' %} <!-- Visual Inheritance -->
 
 
 {% block title %}
-Add New Hero.
+Add New Hero Button
 {% endblock title %}
 
 
@@ -10,7 +10,7 @@ Add New Hero.
 
 <div class="container m-5">
 
-    {% load crispy_forms_tags %}
+    {% load crispy_forms_tags %} <!-- From Cripsy Forms Styling Tool -->
 
     <form action="" method="post">
         {% csrf_token %}

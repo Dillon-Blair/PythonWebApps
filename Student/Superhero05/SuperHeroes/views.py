@@ -13,7 +13,7 @@ class HeroListView(ListView):
             'object_list': Hero.objects.all() #grabs all the objects created
         }
 
-# These are what we made in the lesson and learned about for project #5
+# CRUD OPeration Views
 class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Hero
