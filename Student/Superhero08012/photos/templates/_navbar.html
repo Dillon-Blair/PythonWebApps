@@ -16,7 +16,10 @@
 
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link text-light" href="{% url 'author_home' %}">Add Hero Entry</a>
+                <a class="nav-link text-light" href="{% url 'author_home' %}">Add Hero Photo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="{% url 'article-add' %}">Add Hero Article</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link  text-light" href="{% url 'author_home' %}">Welcome, {{ user.username }}</a>

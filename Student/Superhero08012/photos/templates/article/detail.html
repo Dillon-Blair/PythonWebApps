@@ -1,0 +1,26 @@
+{% extends 'theme.html' %}
+{% load static %}
+
+{% block title %}Article Details{% endblock %}
+
+{% block content %}
+
+
+<div class="card">
+    <img src="{{ article.photo.image.url }}" alt="{{ article.photo }}" width="300px">
+    
+    <div class="card-body">
+        <h1 class="card-title">Hero: {{ article.hero }}</h1>
+        <p><strong>Title:</strong> {{ article.title }}</p>
+        <p><strong>Author:</strong> {{ article.author }}</p>
+    
+        
+        <p><strong>Date:</strong> {{ article.date }}</p>
+        <p class="card-text"><strong>Content:</strong> {{ article.content }}</p>
+        
+    </div>
+</div>
+
+<!-- Buttons to Return to Article List -->
+<a class="btn btn-primary" href="{% url 'article-list' %}">Return</a>
+{% endblock %}

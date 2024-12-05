@@ -2,9 +2,64 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, RedirectView, TemplateView, UpdateView
+from django.core.exceptions import PermissionDenied
+from .models import Author, Photo, Article
 
-from .models import Author, Photo
 
+#Article Views included in Photo Views
+class ArticleListView(ListView):
+    model = Article
+    template_name = 'article/list.html'
+    context_object_name = 'articles'
+
+class ArticleCreateView(LoginRequiredMixin, CreateView):
+    model = Article
+    template_name = 'article/add.html'
+    fields = ['hero','title', 'content', 'author','photo']
+    success_url = reverse_lazy('article-list')
+
+
+    def form_valid(self, form):
+        # Set value to current user
+        form.instance.author = self.request.user.username
+        return super().form_valid(form)
+
+class ArticleDetailView(DetailView):
+    model = Article
+    template_name = 'article/detail.html'
+    context_object_name = 'article'
+
+#Must be logged in
+class ArticleUpdateView(LoginRequiredMixin, UpdateView):
+    model = Article
+    template_name = 'article/edit.html'
+    success_url = reverse_lazy('article-list')
+    fields = ['hero','title', 'content', 'author','photo']
+    def get_object(self, queryset=None):
+        article = super().get_object(queryset)
+
+        # User Authentication
+        if article.author != self.request.user.username:
+            raise PermissionDenied("You do not have permission to delete this object.")
+
+        return article
+    
+#Must be logged in 
+class ArticleDeleteView(LoginRequiredMixin, DeleteView):
+    model = Article
+    template_name = 'article/delete.html'
+    success_url = reverse_lazy('article-list')
+
+    def get_object(self, queryset=None):
+        article = super().get_object(queryset)
+
+        # User Authentication
+        if article.author != self.request.user.username:
+            raise PermissionDenied("You do not have permission to delete this object.")
+
+        return article
+
+#Photo Views
 
 class PhotoView(RedirectView):
     url = reverse_lazy('photo_list')

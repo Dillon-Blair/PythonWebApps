@@ -7,7 +7,7 @@ from django.contrib.auth.forms import UserCreationForm #Default stuff
 
 from .models import Author
 
-
+#User Authentication Views
 class UserHomeView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         if self.request.user.is_anonymous:

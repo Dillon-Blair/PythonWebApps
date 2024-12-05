@@ -28,9 +28,17 @@ class Author(models.Model):
 
 
 def get_upload(instance, filename):
-    # if instance.folder:
-    #     return f'images/{instance.folder}/{filename}'
     return f'images/{filename}'
+
+# Article Model
+class Article(models.Model):
+    hero = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    author = models.CharField(max_length=200)
+    date = models.DateField(auto_now_add=True)
+    photo = models.ForeignKey('Photo', on_delete=models.CASCADE, null=True, blank=True)
+    
 
 
 class Photo (models.Model):
