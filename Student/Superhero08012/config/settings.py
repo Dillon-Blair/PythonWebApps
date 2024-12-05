@@ -40,16 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Third-party
+    # Installation to help with styling
     'crispy_forms',
 
-    # My apps
+    # Project 8 apps
     'photos',
 
     'crispy_bootstrap4',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4' #the crispy-forms configuration
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
