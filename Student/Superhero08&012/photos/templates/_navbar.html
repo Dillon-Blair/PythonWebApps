@@ -1,0 +1,50 @@
+<!-- Navigation Bar Template-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary text-light">
+
+    <div class="container">
+
+        <a class="navbar-brand text-light" href="/">HomePage</a>
+
+        <ul class="navbar-nav text-light ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="{% url 'author_list' %}">Users</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link text-light" href="/photo/carousel">Superhero Collection</a>
+            </li>
+
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link text-light" href="{% url 'author_home' %}">Add Hero Entry</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  text-light" href="{% url 'author_home' %}">Welcome, {{ user.username }}</a>
+            </li>
+            <li class="nav-item">
+                <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-link text-light" style="background: goldenrod; border: none; padding: 100; cursor: pointer;">
+                        Log out
+                    </button>
+                </form>
+            </li>
+
+            <!-- If the user is not logged in, then this part of the Navigation Bar will ask to have them log in-->
+            {% else %}
+
+            <li class="nav-item">
+                <a class="nav-link  text-light " href="{% url 'login' %}">Log In</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link  text-light" href="{% url 'author_add' %}">Sign Up</a>
+            </li>
+
+            {% endif %}
+
+        </ul>
+
+    </div>
+
+</nav>

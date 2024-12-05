@@ -1,0 +1,20 @@
+{% extends 'theme.html' %}
+
+{% block title %}
+Delete Photo
+{% endblock title %}
+
+
+{% block content %}
+
+    <div class="container m-5">
+
+    <form action="" method="post">{% csrf_token %}
+        <p>Confirm Deletion "{{ object.title }}"?</p>
+        <input type="submit" value="Confirm">
+    </form>
+
+</div>
+
+{% endblock content %}
+

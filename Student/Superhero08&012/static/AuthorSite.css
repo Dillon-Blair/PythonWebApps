@@ -1,0 +1,34 @@
+.card {
+    box-shadow: 2px 2px 5px purple;
+    margin: auto;
+    padding: 50px;
+    background-color: goldenrod;
+    
+}
+
+.card-header {
+    color: blue;
+    font-size: large;
+    margin: 50;
+}
+
+.author {
+    background-color: goldenrod;
+    color: blue;
+}
+
+.message {
+    background-color: goldenrod;
+    color: blue;
+}
+
+.textarea {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+body {
+    background-color: goldenrod;
+}

@@ -1,0 +1,26 @@
+<div class="card col-lg">
+
+    <div class="card-header author">
+        Authors for BACS350 Project 8
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Author</th>
+                <th class = "text-dark">Author Details</th>
+                <th>Modify?</th>
+            </tr>
+
+            <!-- Creates the list of authors view-->
+            {% for author in authors %}
+            <tr>
+                <td><a href="/author/{{ author.pk }}">{{ author.name }}</a></td>
+                <td>{{ author.bio }}</td>
+                <td><a href="/author/{{ author.pk }}/">Edit Author</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+</div>

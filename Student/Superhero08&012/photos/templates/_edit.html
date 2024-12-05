@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+
+<form action="" method="post">{% csrf_token %}
+
+    {{ form|crispy }} <!-- from the crispy installation-->
+
+    <button class="btn btn-success m-5" type="submit">Save Changes</button>
+    <a class="btn btn-success m-5" href="/object_instance/{{ object.pk }}/delete">Delete</a>
+
+</form>
+
