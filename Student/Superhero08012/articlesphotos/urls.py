@@ -5,9 +5,9 @@ from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 from django.views.generic import RedirectView
 
-from .views_user import UserAddView, UserHomeView, UserUpdateView
-from .views_author import AuthorDeleteView, AuthorDetailView, AuthorListView, AuthorUpdateView
-from .views_photo import PhotoCarouselView, PhotoDeleteView, PhotoDetailView, PhotoListView, PhotoCreateView, PhotoUpdateView, ArticleCreateView, ArticleDeleteView, ArticleListView, ArticleDetailView, ArticleUpdateView 
+from articlesphotos.views_user import UserAddView, UserHomeView, UserUpdateView
+from articlesphotos.views_author import AuthorDeleteView, AuthorDetailView, AuthorListView, AuthorUpdateView
+from articlesphotos.views_photo import PhotoCarouselView, PhotoDeleteView, PhotoDetailView, PhotoListView, PhotoCreateView, PhotoUpdateView, ArticleCreateView, ArticleDeleteView, ArticleListView, ArticleDetailView, ArticleUpdateView 
 
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('articles/<int:pk>/', ArticleDetailView.as_view(), name='article-detail'),
     path('articles/<int:pk>/edit/', ArticleUpdateView.as_view(), name='article-edit'),
     path('articles/<int:pk>/delete/', ArticleDeleteView.as_view(), name='article-delete'),
+    path('object_instance/<int:pk>/delete', AuthorDeleteView.as_view(),  name='author_delete'),
 
     path('author/',                     AuthorListView.as_view(),    name='author_list'),
     path('author/<int:pk>',             AuthorDetailView.as_view(),  name='author_detail'),

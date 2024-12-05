@@ -13,7 +13,7 @@ class UserHomeView(RedirectView):
         if self.request.user.is_anonymous:
             return '/author/'
         author = Author.get_me(self.request.user)
-        if author.name == ' ':
+        if author.name == ' ': #if its empty
             author.user.first_name = 'Unknown Author Name'
             author.user.last_name = 'Defualt UserName'
             author.user.email = 'me@unco.us.com'

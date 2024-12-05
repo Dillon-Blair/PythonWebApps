@@ -5,8 +5,7 @@
 {% block content %}
 <h1>Delete {{ article.title }}?</h1>
 
-<p>Are you sure you want to delete the superhero <strong>{{ article.title }}</strong>?</p>
-<p>This action cannot be undone.</p>
+<p>Are you sure you want to delete <strong>{{ article.title }}</strong>?</p>
 
 <form action="" method="post">
     {% csrf_token %}
@@ -15,7 +14,7 @@
     <button type="submit" class="btn btn-danger">Delete</button>
 
     <!-- Cancel button -->
-    <a class="btn btn-secondary" href="{% url 'article-detail' article.pk %}">Cancel</a>
+    <a class="btn btn-secondary" href="{% url 'article-detail' article.pk %}">return</a>
 </form>
 
 {% endblock %}

@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     # Installation to help with styling
     'crispy_forms',
 
-    # Project 8 apps
-    'photos',
+    # Project 8,12, 10ish apps
+    'articlesphotos',
 
     'crispy_bootstrap4',
 ]
@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'photos.urls'
+ROOT_URLCONF = 'articlesphotos.urls'
 
 LOGIN_REDIRECT_URL = '/'
 

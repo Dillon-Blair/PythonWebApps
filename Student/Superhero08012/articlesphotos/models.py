@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse_lazy
 
-
+# Author models
 class Author(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
@@ -42,7 +42,7 @@ class Article(models.Model):
     photo = models.ForeignKey('Photo', on_delete=models.CASCADE, null=True, blank=True)
     
 
-
+# Photo Models
 class Photo (models.Model):
 
     author = models.ForeignKey(Author, on_delete=models.CASCADE, editable=False)
