@@ -18,6 +18,7 @@ class Author(models.Model):
     def name(self):
         return self.user.first_name + ' ' + self.user.last_name
 
+    #For the photos
     @property
     def photos(self):
         return Photo.objects.filter(author=self)
@@ -32,6 +33,7 @@ def get_upload(instance, filename):
 
 # Article Model
 class Article(models.Model):
+    
     hero = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     content = models.TextField()

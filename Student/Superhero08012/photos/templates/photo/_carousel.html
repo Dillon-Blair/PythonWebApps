@@ -15,12 +15,12 @@
     </div>
 
 
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="background-color: goldenrod;">
 
         {% for image in carousel %}
 
         <div class="carousel-item {{ image.active }}">
-            <img class="d-block w-100" src="{{ image.image_url }}" alt="{{ image.label }}" width = "300">
+            <img class="d-block w-50" src="{{ image.image_url }}" alt="{{ image.label }}" width = "50">
         </div>
 
         {% endfor %}

@@ -3,7 +3,6 @@
 {% block title %}Add an Article{% endblock %}
 
 {% block content %}
-<h1>Add an Article</h1>
     
 {% load crispy_forms_tags %}
 <form action="{% url 'article-add' %}" method="post">{% csrf_token %}
