@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Author
 
-
+#CRUD OPERATIONS
 class AuthorView(RedirectView):
     url = reverse_lazy('author_list')
 
@@ -23,11 +23,10 @@ class AuthorDetailView(DetailView):
     context_object_name = 'author'
 
     def get_context_data(self, **kwargs):
-        kwargs = super().get_context_data(**kwargs)
-        author = kwargs.get('author')
-        kwargs.update(dict(photos=author.photos))
-        return kwargs
-
+            kwargs = super().get_context_data(**kwargs)
+            author = kwargs.get('author')
+            kwargs.update(dict(photos=author.photos))
+            return 
 
 class AuthorUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "author/edit.html"

@@ -29,6 +29,8 @@ urlpatterns = [
     path('articles/<int:pk>/delete/', ArticleDeleteView.as_view(), name='article-delete'),
     path('object_instance/<int:pk>/delete', AuthorDeleteView.as_view(),  name='author_delete'),
 
+    #path('author/''/', AuthorUpdateView.as_view(), name='author_update'),
+    path('author/<int:pk>/', AuthorUpdateView.as_view(), name='author_update'),
     path('author/',                     AuthorListView.as_view(),    name='author_list'),
     path('author/<int:pk>',             AuthorDetailView.as_view(),  name='author_detail'),
     path('author/<int:pk>/',            AuthorUpdateView.as_view(),  name='author_edit'),

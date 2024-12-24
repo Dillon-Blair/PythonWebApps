@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 class Author(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
-    bio = models.TextField()
+    biography = models.TextField()
 
     def __str__(self):
         return f'{self.user.username}'
@@ -25,7 +25,10 @@ class Author(models.Model):
 
     @staticmethod
     def get_me(user):
-        return Author.objects.get_or_create(user=user)[0]
+        if user.is_authenticated:
+            return Author.objects.get_or_create(user=user)[0]
+        else:
+           return reverse_lazy('author_detail')
 
 
 def get_upload(instance, filename):
